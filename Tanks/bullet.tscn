@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://cl7riw3ej1sb"]
+
+[ext_resource type="Script" path="res://Tanks/bullet.gd" id="1_r74md"]
+[ext_resource type="Texture2D" uid="uid://mdl8w8ke56k8" path="res://Tanks/onlyObjects_retina.png" id="2_xmik4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5q7mn"]
+atlas = ExtResource("2_xmik4")
+region = Rect2(576, 350, 16, 34)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_1uhmu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5q7mn")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="RigidBody2D" type="RigidBody2D"]
+z_index = -1
+gravity_scale = 2.66454e-15
+script = ExtResource("1_r74md")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+rotation = 1.5708
+sprite_frames = SubResource("SpriteFrames_1uhmu")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dejchcfrbh4vo"]
+
+[ext_resource type="Script" path="res://FollowMouse/followMouse.gd" id="1_lppph"]
+[ext_resource type="Texture2D" uid="uid://kppicu7i3js4" path="res://icon.svg" id="2_3s7dy"]
+[ext_resource type="PackedScene" uid="uid://b0xawick7fdgk" path="res://global_gui.tscn" id="3_42rf0"]
+
+[node name="main" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(680, 222)
+rotation = -0.971569
+script = ExtResource("1_lppph")
+
+[node name="Sprite2D" type="Sprite2D" parent="Node2D"]
+texture = ExtResource("2_3s7dy")
+
+[node name="GlobalGui" parent="." instance=ExtResource("3_42rf0")]
+offset_left = 0.0
+offset_top = 0.0
+offset_right = 338.0
+offset_bottom = 135.0
